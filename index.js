@@ -87,14 +87,16 @@ var finances = [
     ['Feb-2017', 671099],
   ];
   
-  
-  
   //var date = finances[i][0];
   //var money = finances[i][1];
-  
+
+
+  console.log("Financial Analysis \n  ----------------");
+
+
   // total months:
   var totalMonths = finances.length;
-  
+       console.log("Total Months : " + finances.length);
   
   
   // total amount:
@@ -103,10 +105,11 @@ var finances = [
   for (var i = 0; i< finances.length; i++){
     totalAmount += finances[i][1];  // totalAmount = totalAmount + finances [i][1]
   }
+      console.log( "Total: " + totalAmount);
   
   
   //average of changes
-  
+  var averageChange=0
   var monthlyChangesTotal = 0;
   var currentMonth=0;
   var previousMonth=0;
@@ -120,13 +123,15 @@ var finances = [
     monthlyChangesTotal+=currentMonth-previousMonth 
     
   }  
+
+  averageChange=((monthlyChangesTotal/(totalMonths-1)));
+
   
+  console.log("Average Change: " + averageChange.toFixed(2));
+
+
+
+  console.log("Greatest Increase in Profits/Losses: " );
   
-  
-  // Output
-  
-  console.log("Total Months : " + finances.length);
-  console.log( "Total: " + totalAmount);
-  console.log("Average Change: " + (monthlyChangesTotal/(totalMonths-1)))
-  
-  
+  console.log("Greatest Decrease in Profits/Losses: " );
+
